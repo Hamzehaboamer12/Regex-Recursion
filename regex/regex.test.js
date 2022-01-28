@@ -7,8 +7,16 @@ characters (no numbers and symbols) and it should end with capital A else return
 
 function capitalA(s){
     // Add your logic.
-    return;
+    let reg = /([a-zA-Z:\.\/\(\)\-\s])/g;
+    let reg2= /(A)$/gi;
+    if(reg.test(s) && reg2.test(s)){
+         return true;
+    } else {
+        return false;
+    }
 }
+
+
 
 
 /* Write a function that take a string and return true if the the sting is following the emails pattern
@@ -16,7 +24,15 @@ which end with io (example@example.io) */
 
 function ioEmail(email){
     // Add your logic.
-    return;
+
+let reg =/([a-zA-Z0-9]+@[a-zA-z]+.io)/;
+if(reg.test(email)){
+    return true;
+} else{
+    return false;
+}
+
+   
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
